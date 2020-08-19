@@ -18,3 +18,4 @@
 8. initial min and max should be based on parent div, not vw (also work with .2 decimals instead of ints when calculating min current and max)
 13. organize the js file - funcions should be in different files based on what they do
 14. error messages if input incorrectly
+15. readme file
