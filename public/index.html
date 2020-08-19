@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement Units Calculator</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+
+<body>
+    <div class="content-wrapper">
+        <h1>Measurement Units</h1>
+        <h2>Absolute Units</h2>
+        <div class="unit-wrapper">
+            <button class="btn-cm clickable" data-unit="cm">Centimeter (cm)</button>
+            <button class="btn-mm clickable" data-unit="mm">Milimeter (mm)</button>
+            <button class="btn-in clickable" data-unit="in">Inches (in)</button>
+            <button class="btn-px clickable" data-unit="px">Pixels (px)</button>
+            <button class="btn-pt clickable" data-unit="pt">Points (pt)</button>
+            <button class="btn-pc clickable" data-unit="pc">Pica (pc)</button>
+        </div>
+        <div class="selected-wrapper block-none">
+            <div class="unit-info-wrapper">
+                <div class="unit-info">
+                    <p>Hi! If you reached this block of code on your browser, congratulations! You're a developer.</p>
+                    <!-- Template -->
+                    <!-- <h4>Centimeter (<label class="cm">cm</label>)</h4>
+                    <ul>
+                        <li>1 <label class="cm">cm</label> = 10 <label class="mm">mm</label></li>
+                        <li>1 <label class="cm">cm</label> = 0.3937007874 <label class="in">in</label></li>
+                        <li>1 <label class="cm">cm</label> = 37.795275591 <label class="px">px</label></li>
+                        <li>1 <label class="cm">cm</label> = 28.346456693 <label class="pt">pt</label></li>
+                        <li>1 <label class="cm">cm</label> = 2.3622047244 <label class="pc">pc</label></li>
+                    </ul> -->
+                </div>
+            </div>
+            <div class="unit-range-wrapper">
+                <div class="unit-range">
+                    <input type="range" name="unit-range" id="unit-range">
+                </div>
+                <div class="unit-range-values-wrapper">
+                    <div class="unit-range-min unit-range-box clickable">
+                        <label for="unit-range-min">MIN</label>
+                        <span>X</span>
+                        <input type="number" min="0" name="unit-range-min" id="unit-range-min" hidden>
+                    </div>
+
+                    <div class="unit-range-current unit-range-box clickable">
+                        <label for="unit-range-current">CURRENT</label>
+                        <span>Y</span>
+                        <input type="number" min="0" name="unit-range-current" id="unit-range-current" hidden>
+                    </div>
+
+                    <div class="unit-range-max unit-range-box clickable">
+                        <label for="unit-range-max">MAX</label>
+                        <span>Z</span>
+                        <input type="number" min="0" name="unit-range-max" id="unit-range-max" hidden>
+                    </div>
+                </div>
+
+            </div>
+            <div class="unit-display"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="../js/calculator.js"></script>
+</body>
+
+</html>
+
+<!-- Div no centro com:
+
+=========================================RANGE BAR================================================================
+INPUT(min value, editable) INPUT(current value, editable) INPUT(max value, editable) -->

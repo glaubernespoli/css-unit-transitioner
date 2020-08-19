@@ -1,0 +1,267 @@
+@import url('range.css');
+
+:root {
+    --cm: rgb(204, 135, 135);
+    --cm-o: rgba(204, 135, 135, 0.6);
+
+    --mm: rgb(204, 194, 135);
+    --mm-o: rgba(204, 194, 135, 0.6);
+
+    --in: rgb(143, 204, 135);
+    --in-o: rgba(143, 204, 135, 0.6);
+
+    --px: rgb(135, 204, 201);
+    --px-o: rgba(135, 204, 201, 0.6);
+
+    --pt: rgb(161, 135, 204);
+    --pt-o: rgba(161, 135, 204, 0.6);
+
+    --pc: rgb(202, 99, 194);
+    --pc-o: rgba(202, 99, 194, 0.6);
+
+    --bg-color: rgb(15, 46, 61);
+    --font-color: rgb(232, 230, 227);
+    --font-color-o: rgb(232, 230, 227, 0.6);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    height: 80vh;
+    font-family: 'Josefin Sans', sans-serif;
+    /* background-color: rgba(163, 155, 155, 0.877);
+    color: rgba(32, 32, 34, 0.534); */
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+    border-bottom: 2px solid var(--font-color);
+}
+
+.block-none {
+    display: none;
+}
+
+div.content-wrapper {
+    margin: 1rem 3vw;
+}
+
+div.unit-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    padding: 0.5rem 2rem;
+}
+
+div.unit-wrapper button {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+    background-color: inherit;
+    display: inline-block;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    height: 3rem;
+    font-size: 13px;
+    color: var(--font-color);
+    padding: 0.9rem 1.8rem;
+    line-height: 0;
+    transition: background-color ease-in-out 0.1s;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+div.unit-wrapper button:focus {
+    outline: none;
+}
+
+div.unit-wrapper button.btn-cm:hover {
+    background-color: var(--cm-o);
+}
+
+div.unit-wrapper button.btn-mm:hover {
+    background-color: var(--mm-o);
+}
+
+div.unit-wrapper button.btn-in:hover {
+    background-color: var(--in-o);
+}
+
+div.unit-wrapper button.btn-px:hover {
+    background-color: var(--px-o);
+}
+
+div.unit-wrapper button.btn-pt:hover {
+    background-color: var(--pt-o);
+}
+
+div.unit-wrapper button.btn-pc:hover {
+    background-color: var(--pc-o);
+}
+
+div.unit-wrapper button.btn-cm.active,
+div.cm {
+    background-color: var(--cm);
+}
+
+div.unit-wrapper button.btn-mm.active,
+div.mm {
+    background-color: var(--mm);
+}
+
+div.unit-wrapper button.btn-in.active,
+div.in {
+    background-color: var(--in);
+}
+
+div.unit-wrapper button.btn-px.active,
+div.px {
+    background-color: var(--px);
+}
+
+div.unit-wrapper button.btn-pt.active,
+div.pt {
+    background-color: var(--pt);
+}
+
+div.unit-wrapper button.btn-pc.active,
+div.pc {
+    background-color: var(--pc);
+}
+
+div.selected-wrapper div.unit-info-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+div.selected-wrapper div.unit-info-wrapper div.unit-info {
+    font-weight: bold;
+    border: 3px solid var(--font-color-o);
+    border-radius: 5px;
+    padding: 0 2rem;
+    text-align: center;
+    transition: border ease-in-out .3s;
+}
+
+div.selected-wrapper div.unit-info-wrapper div.unit-info:hover {
+    border: 3px solid var(--font-color);
+}
+
+div.selected-wrapper div.unit-info-wrapper div.unit-info h4 {
+    font-size: 1.12em;
+    font-weight: bold;
+}
+
+div.selected-wrapper div.unit-info-wrapper div.unit-info ul {
+    padding-left: 0;
+    text-align: left;
+}
+
+label.cm {
+    color: var(--cm);
+}
+
+label.mm {
+    color: var(--mm);
+}
+
+label.in {
+    color: var(--in);
+}
+
+label.px {
+    color: var(--px);
+}
+
+label.pt {
+    color: var(--pt);
+}
+
+label.pc {
+    color: var(--pc);
+}
+
+div.unit-range-wrapper {
+    text-align: center;
+}
+
+div.selected-wrapper>div,
+div.unit-range-wrapper>div {
+    margin: 1em;
+}
+
+div.unit-range-values-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.unit-range-box {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--font-color-o);
+    border-radius: 5px;
+    width: 5vw;
+    height: 2.1rem;
+    transition: all ease-in-out 0.1s;
+}
+
+div.unit-range-box:hover {
+    background-color: rgb(20, 56, 75);
+}
+
+div.unit-range-box>label,
+div.unit-range-box>span {
+    pointer-events: none;
+}
+
+div.unit-range-box>label {
+    text-align: left;
+    font-size: x-small;
+    font-weight: bold;
+}
+
+div.unit-range-box>span {
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* div.unit-range-box>input[type="text"] {
+    margin: auto 20%;
+} */
+
+
+
+
+
+
+
+/**CHECK ME =======================**/
+section h3 {
+    margin-top: 2em;
+    font-size: x-large;
+    background-image: linear-gradient(var(--font-color), var(--font-color));
+    background-repeat: no-repeat;
+    background-size: 50% 2px, calc(100% - 4px) 100%;
+    background-position: left bottom, 0 4px;
+}
+
+section h3::before {
+    content: '•';
+    margin-right: 5px;
+}
+
+section h3::after {
+    width: 50%;
+    border-bottom: none;
+}
+
+/* div {
+	height: 18px;
+} */
