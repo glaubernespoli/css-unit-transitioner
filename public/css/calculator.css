@@ -166,6 +166,12 @@ label.pc {
 
 div.unit-range-wrapper {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+div.unit-range-wrapper>div.unit-range-growth {
+    align-self: flex-end;
 }
 
 div.selected-wrapper>div,

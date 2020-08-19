@@ -34,7 +34,6 @@ function setCurrentActiveUnit(button) {
 }
 
 function setSliderUnitClassFor(unit) {
-    console.log(unit);
     $('#unit-range').removeClass('cm mm in px pt pc').addClass(unit);
 }
 
@@ -76,6 +75,7 @@ function updateSelectedContentFor(unit) {
             updateRangeValues(unit);
             updateRangeDisplayLabelsWhenSelectingUnit();
             setSliderUnitClassFor(unit);
+            updateGrowth();
         })
         .fadeIn(300);
 }
@@ -87,6 +87,16 @@ function updateRangeValues(currentUnitLabel) {
     $('#unit-range-min').val(0);
     $('#unit-range-current').val(Math.round(maxWidth / 2));
     $('#unit-range-max').val(Math.round(maxWidth));
+}
+
+/**
+ * //TODO By now, everyone's growth is 1...
+ */
+function updateGrowth() {
+    const growthInput = $('#unit-range-growth');
+    growthInput.val(1);
+    updateSpanAndRangeValuesFor(growthInput);
+
 }
 
 function updateRangeDisplayLabelsWhenSelectingUnit() {
@@ -160,32 +170,52 @@ function updateSpanAndRangeValuesFor(inputElement) {
     const minInput = $('#unit-range-min');
     const currentInput = $('#unit-range-current');
     const maxInput = $('#unit-range-max');
+    const growthInput = $('#unit-range-growth');
 
-    const val = getNumber(inputElement.val());
-    const minVal = getNumber(minInput.val());
-    const currentVal = getNumber(currentInput.val());
-    const maxVal = getNumber(maxInput.val());
+    let val, minVal, currentVal, maxVal;
     switch (inputElement.attr('id')) {
         case minInput.attr('id'):
+            val = getNumber(inputElement.val());
+            currentVal = getNumber(currentInput.val());
             if (val >= 0 && val <= currentVal) {
                 updateSpanAndRangeValues(minInput, 'min');
             }
             break;
+
         case currentInput.attr('id'):
+            val = getNumber(inputElement.val());
+            minVal = getNumber(minInput.val());
+            maxVal = getNumber(maxInput.val());
             if (val >= minVal && val <= maxVal) {
                 updateMaxOfMinAndMinOfMax(val);
                 updateSpanAndRangeValues(currentInput, 'value');
             }
             break;
+
         case maxInput.attr('id'):
+            val = getNumber(inputElement.val());
+            currentVal = getNumber(currentInput.val());
             if (val >= currentVal) {
+                updateMaxGrowth(maxVal);
                 updateSpanAndRangeValues(maxInput, 'max');
             }
             break;
+
+        case growthInput.attr('id'):
+            const growth = getNumber(growthInput.val());
+            maxVal = getNumber(maxInput.val());
+            if (growth >= 0 && growth <= maxVal)
+                updateSpanAndRangeValues(growthInput, 'step');
+            break;
+
         default:
             break;
     }
     revertInputValueIfSpanNotUpdated(inputElement);
+}
+
+function updateMaxGrowth(val) {
+    $('#unit-range-growth').attr('max', val);
 }
 
 function getNumber(strVal) {
