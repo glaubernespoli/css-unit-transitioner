@@ -30,7 +30,12 @@ function setCurrentActiveUnit(button) {
     if (active.length > 0) {
         $(active[0]).removeClass('active');
     }
-    $(button).addClass('active');
+    button.addClass('active');
+}
+
+function setSliderUnitClassFor(unit) {
+    console.log(unit);
+    $('#unit-range').removeClass('cm mm in px pt pc').addClass(unit);
 }
 
 /**
@@ -64,13 +69,13 @@ function buildInfoDisplayFor(currentUnitLabel) {
  * Updates the content area for the selected unit element.
  * @param {object} button the button element
  */
-function updateSelectedContent(button) {
-    const currentUnitLabel = $(button).data('unit');
+function updateSelectedContentFor(unit) {
     $('.selected-wrapper')
         .fadeOut(300, () => {
-            updateInfoDisplay(currentUnitLabel);
-            updateRangeValues(currentUnitLabel);
+            updateInfoDisplay(unit);
+            updateRangeValues(unit);
             updateRangeDisplayLabelsWhenSelectingUnit();
+            setSliderUnitClassFor(unit);
         })
         .fadeIn(300);
 }
@@ -94,9 +99,9 @@ function updateRangeDisplayLabelsWhenSelectingUnit() {
  * Actions to be done once the unit button is clicked.
  */
 $('div.unit-wrapper button').click((e) => {
-    const button = e.target;
+    const button = $(e.target);
     setCurrentActiveUnit(button);
-    updateSelectedContent(button);
+    updateSelectedContentFor(button.data('unit'));
 });
 
 /**

@@ -1,0 +1,271 @@
+@import url('root.css');
+
+/* ======================= CM======================= */
+input[type=range].cm::-webkit-slider-runnable-track {
+    background: var(--cm-o);
+}
+
+input[type=range].cm::-ms-fill-lower {
+    background: var(--cm-o);
+}
+
+input[type=range].cm::-ms-fill-upper {
+    background: var(--cm-o);
+}
+
+input[type=range].cm::-moz-range-track {
+    background: var(--cm-o);
+}
+
+input[type=range].cm:focus::-ms-fill-lower {
+    background: var(--cm);
+}
+
+input[type=range].cm:focus::-ms-fill-upper {
+    background: var(--cm);
+}
+
+input[type=range].cm:focus::-webkit-slider-runnable-track {
+    background: var(--cm);
+}
+
+input[type=range].cm:focus::-moz-range-track {
+    background: var(--cm);
+}
+
+input[type=range].cm::-webkit-slider-thumb {
+    background: var(--cm);
+}
+
+input[type=range].cm::-moz-range-thumb {
+    background: var(--cm);
+}
+
+input[type=range].cm::-ms-thumb {
+    background: var(--cm);
+}
+
+/* ======================= MM ======================= */
+input[type=range].mm::-webkit-slider-runnable-track {
+    background: var(--mm-o);
+}
+
+input[type=range].mm::-ms-fill-lower {
+    background: var(--mm-o);
+}
+
+input[type=range].mm::-ms-fill-upper {
+    background: var(--mm-o);
+}
+
+input[type=range].mm::-moz-range-track {
+    background: var(--mm-o);
+}
+
+input[type=range].mm:focus::-ms-fill-lower {
+    background: var(--mm);
+}
+
+input[type=range].mm:focus::-ms-fill-upper {
+    background: var(--mm);
+}
+
+input[type=range].mm:focus::-webkit-slider-runnable-track {
+    background: var(--mm);
+}
+
+input[type=range].mm:focus::-moz-range-track {
+    background: var(--mm);
+}
+
+input[type=range].mm::-webkit-slider-thumb {
+    background: var(--mm);
+}
+
+input[type=range].mm::-moz-range-thumb {
+    background: var(--mm);
+}
+
+input[type=range].mm::-ms-thumb {
+    background: var(--mm);
+}
+
+/* ======================= IN ======================= */
+input[type=range].in::-webkit-slider-runnable-track {
+    background: var(--in-o);
+}
+
+input[type=range].in::-ms-fill-lower {
+    background: var(--in-o);
+}
+
+input[type=range].in::-ms-fill-upper {
+    background: var(--in-o);
+}
+
+input[type=range].in::-moz-range-track {
+    background: var(--in-o);
+}
+
+input[type=range].in:focus::-ms-fill-lower {
+    background: var(--in);
+}
+
+input[type=range].in:focus::-ms-fill-upper {
+    background: var(--in);
+}
+
+input[type=range].in:focus::-webkit-slider-runnable-track {
+    background: var(--in);
+}
+
+input[type=range].in:focus::-moz-range-track {
+    background: var(--in);
+}
+
+input[type=range].in::-webkit-slider-thumb {
+    background: var(--in);
+}
+
+input[type=range].in::-moz-range-thumb {
+    background: var(--in);
+}
+
+input[type=range].in::-ms-thumb {
+    background: var(--in);
+}
+
+/* ======================= PX ======================= */
+input[type=range].px::-webkit-slider-runnable-track {
+    background: var(--px-o);
+}
+
+input[type=range].px::-ms-fill-lower {
+    background: var(--px-o);
+}
+
+input[type=range].px::-ms-fill-upper {
+    background: var(--px-o);
+}
+
+input[type=range].px::-moz-range-track {
+    background: var(--px-o);
+}
+
+input[type=range].px:focus::-ms-fill-lower {
+    background: var(--px);
+}
+
+input[type=range].px:focus::-ms-fill-upper {
+    background: var(--px);
+}
+
+input[type=range].px:focus::-webkit-slider-runnable-track {
+    background: var(--px);
+}
+
+input[type=range].px:focus::-moz-range-track {
+    background: var(--px);
+}
+
+input[type=range].px::-webkit-slider-thumb {
+    background: var(--px);
+}
+
+input[type=range].px::-moz-range-thumb {
+    background: var(--px);
+}
+
+input[type=range].px::-ms-thumb {
+    background: var(--px);
+}
+
+/* ======================= PT ======================= */
+input[type=range].pt::-webkit-slider-runnable-track {
+    background: var(--pt-o);
+}
+
+input[type=range].pt::-ms-fill-lower {
+    background: var(--pt-o);
+}
+
+input[type=range].pt::-ms-fill-upper {
+    background: var(--pt-o);
+}
+
+input[type=range].pt::-moz-range-track {
+    background: var(--pt-o);
+}
+
+input[type=range].pt:focus::-ms-fill-lower {
+    background: var(--pt);
+}
+
+input[type=range].pt:focus::-ms-fill-upper {
+    background: var(--pt);
+}
+
+input[type=range].pt:focus::-webkit-slider-runnable-track {
+    background: var(--pt);
+}
+
+input[type=range].pt:focus::-moz-range-track {
+    background: var(--pt);
+}
+
+input[type=range].pt::-webkit-slider-thumb {
+    background: var(--pt);
+}
+
+input[type=range].pt::-moz-range-thumb {
+    background: var(--pt);
+}
+
+input[type=range].pt::-ms-thumb {
+    background: var(--pt);
+}
+
+/* ======================= PC ======================= */
+input[type=range].pc::-webkit-slider-runnable-track {
+    background: var(--pc-o);
+}
+
+input[type=range].pc::-ms-fill-lower {
+    background: var(--pc-o);
+}
+
+input[type=range].pc::-ms-fill-upper {
+    background: var(--pc-o);
+}
+
+input[type=range].pc::-moz-range-track {
+    background: var(--pc-o);
+}
+
+input[type=range].pc:focus::-ms-fill-lower {
+    background: var(--pc);
+}
+
+input[type=range].pc:focus::-ms-fill-upper {
+    background: var(--pc);
+}
+
+input[type=range].pc:focus::-webkit-slider-runnable-track {
+    background: var(--pc);
+}
+
+input[type=range].pc:focus::-moz-range-track {
+    background: var(--pc);
+}
+
+input[type=range].pc::-webkit-slider-thumb {
+    background: var(--pc);
+}
+
+input[type=range].pc::-moz-range-thumb {
+    background: var(--pc);
+}
+
+input[type=range].pc::-ms-thumb {
+    background: var(--pc);
+}

@@ -1,8 +1,4 @@
-:root {
-    --track-color: rgba(33, 72, 105, 0.78);
-    --track-color-focus: rgb(20, 76, 126);
-    --thumb-color: rgb(54, 96, 117);
-}
+@import url('range-unit-colors.css');
 
 input[type=range] {
     width: 100%;
@@ -16,7 +12,6 @@ input[type=range]:focus {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
-    background: var(--track-color);
     border: 0.2px solid #010101;
     border-radius: 1.3px;
     width: 100%;
@@ -28,19 +23,13 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -8px;
     width: 26px;
     height: 27px;
-    background: var(--thumb-color);
     border: 1.8px solid #00001e;
     border-radius: 15px;
     cursor: pointer;
     -webkit-appearance: none;
 }
 
-input[type=range]:focus::-webkit-slider-runnable-track {
-    background: var(--track-color-focus);
-}
-
 input[type=range]::-moz-range-track {
-    background: var(--track-color);
     border: 0.2px solid #010101;
     border-radius: 1.3px;
     width: 100%;
@@ -51,7 +40,6 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
     width: 26px;
     height: 27px;
-    background: var(--thumb-color);
     border: 1.8px solid #00001e;
     border-radius: 15px;
     cursor: pointer;
@@ -68,13 +56,11 @@ input[type=range]::-ms-track {
 }
 
 input[type=range]::-ms-fill-lower {
-    background: var(--track-color);
     border: 0.2px solid #010101;
     border-radius: 2.6px;
 }
 
 input[type=range]::-ms-fill-upper {
-    background: var(--track-color);
     border: 0.2px solid #010101;
     border-radius: 2.6px;
 }
@@ -82,20 +68,11 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
     width: 26px;
     height: 27px;
-    background: var(--thumb-color);
     border: 1.8px solid #00001e;
     border-radius: 15px;
     cursor: pointer;
     margin-top: 0px;
     /*Needed to keep the Edge thumb centred*/
-}
-
-input[type=range]:focus::-ms-fill-lower {
-    background: var(--track-color-focus);
-}
-
-input[type=range]:focus::-ms-fill-upper {
-    background: var(--track-color-focus);
 }
 
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
