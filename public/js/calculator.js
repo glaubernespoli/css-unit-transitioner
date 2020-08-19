@@ -2,22 +2,9 @@ import {
     units
 } from './units.js';
 
-/**
- * Determines user's viewport width value in pixels. Used to determine the recommended maximum value on the range slide bar.
- * @param {number} v the desired vw
- */
-function vw(v) {
-    var w = Math.max(
-        document.documentElement.clientWidth,
-        window.innerWidth || 0
-    );
-    return (v * w) / 100;
-}
-
-//TODO pegar width do parent?
-function getMaxValueRangeFor(unitLabel) {
+function getMaxRangeValueFor(unitLabel) {
     const unit = units[unitLabel];
-    const maxWidth = vw(88);
+    const maxWidth = $('.unit-display').width();
     return unitLabel === 'px' ? maxWidth : maxWidth / unit.conversion.px;
 }
 
@@ -72,21 +59,25 @@ function updateSelectedContentFor(unit) {
     $('.selected-wrapper')
         .fadeOut(300, () => {
             updateInfoDisplay(unit);
-            updateRangeValues(unit);
-            updateRangeDisplayLabelsWhenSelectingUnit();
             setSliderUnitClassFor(unit);
-            updateGrowth();
         })
-        .fadeIn(300);
+        .fadeIn({
+            duration: 300,
+            start: () => {
+                updateRangeValues(unit);
+                updateRangeDisplayLabelsWhenSelectingUnit();
+                updateGrowth();
+            }
+        });
 }
 
 //TODO
 function updateRangeValues(currentUnitLabel) {
-    const maxWidth = getMaxValueRangeFor(currentUnitLabel);
+    const maxWidth = getMaxRangeValueFor(currentUnitLabel);
 
     $('#unit-range-min').val(0);
-    $('#unit-range-current').val(Math.round(maxWidth / 2));
-    $('#unit-range-max').val(Math.round(maxWidth));
+    $('#unit-range-current').val(getNumber(maxWidth / 2));
+    $('#unit-range-max').val(getNumber(maxWidth));
 }
 
 /**
