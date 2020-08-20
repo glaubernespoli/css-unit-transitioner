@@ -14,10 +14,12 @@
 7. growth input on top of the range bar to specify how much it should grow (step attr) --OK
 8. initial min and max should be based on parent div, not vw (also work with .2 decimals instead of ints when calculating min current and max) --OK
 14. error messages if input incorrectly --OK
+13. organize the js file - funcions should be in different files based on what they do -- OK
 
 
 
-13. organize the js file - funcions should be in different files based on what they do
 15. readme file
 16. style text input
 17. responsiveness - input boxes get really bad when in small screen
+18. refactor updateSpanAndRangeValuesFor() on content-range-input.js - separate tasks
+19. Tests DD:
