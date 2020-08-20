@@ -12,10 +12,12 @@
 10. smoothly change the bg on :hover on the unit buttons --OK
 6. range silde bar should have the specified color -- OK
 7. growth input on top of the range bar to specify how much it should grow (step attr) --OK
+8. initial min and max should be based on parent div, not vw (also work with .2 decimals instead of ints when calculating min current and max) --OK
+14. error messages if input incorrectly --OK
 
 
 
-8. initial min and max should be based on parent div, not vw (also work with .2 decimals instead of ints when calculating min current and max)
 13. organize the js file - funcions should be in different files based on what they do
-14. error messages if input incorrectly
 15. readme file
+16. style text input
+17. responsiveness - input boxes get really bad when in small screen

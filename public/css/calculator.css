@@ -170,7 +170,7 @@ div.unit-range-wrapper {
     flex-direction: column;
 }
 
-div.unit-range-wrapper>div.unit-range-growth {
+div.unit-range-wrapper>div.unit-range-growth-box {
     align-self: flex-end;
 }
 
@@ -212,6 +212,32 @@ div.unit-range-box>label {
 div.unit-range-box>span {
     font-size: medium;
     font-weight: bold;
+}
+
+div.error,
+#error {
+    border: 1px solid rgb(177, 23, 23) !important;
+}
+
+#error {
+    /* border: 1px solid var(--font-color-o); */
+    display: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(194, 100, 100);
+    padding: 1vh 3vw;
+    /* background-color: rgb(149, 185, 204); */
+    /* background-color: rgb(64, 122, 151); */
+}
+
+#error>span {
+    font-size: medium;
+    font-weight: bold;
+    color: var(--font-color);
+    cursor: default;
 }
 
 /* div.unit-range-box>input[type="text"] {

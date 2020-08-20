@@ -163,13 +163,15 @@ function updateSpanAndRangeValuesFor(inputElement) {
     const maxInput = $('#unit-range-max');
     const growthInput = $('#unit-range-growth');
 
-    let val, minVal, currentVal, maxVal;
+    let val, minVal, currentVal, maxVal, error;
     switch (inputElement.attr('id')) {
         case minInput.attr('id'):
             val = getNumber(inputElement.val());
             currentVal = getNumber(currentInput.val());
             if (val >= 0 && val <= currentVal) {
                 updateSpanAndRangeValues(minInput, 'min');
+            } else {
+                error = 'Incorrect value: MIN should be >= 0 and <= CURRENT.';
             }
             break;
 
@@ -180,6 +182,8 @@ function updateSpanAndRangeValuesFor(inputElement) {
             if (val >= minVal && val <= maxVal) {
                 updateMaxOfMinAndMinOfMax(val);
                 updateSpanAndRangeValues(currentInput, 'value');
+            } else {
+                error = 'Incorrect value: CURRENT should be >= MIN and <= MAX.';
             }
             break;
 
@@ -189,20 +193,25 @@ function updateSpanAndRangeValuesFor(inputElement) {
             if (val >= currentVal) {
                 updateMaxGrowth(maxVal);
                 updateSpanAndRangeValues(maxInput, 'max');
+            } else {
+                error = 'Incorrect value: MAX should be >= CURRENT.';
             }
             break;
 
         case growthInput.attr('id'):
             const growth = getNumber(growthInput.val());
             maxVal = getNumber(maxInput.val());
-            if (growth >= 0 && growth <= maxVal)
+            if (growth >= 0 && growth <= maxVal) {
                 updateSpanAndRangeValues(growthInput, 'step');
+            } else {
+                error = 'Incorrect value: GROWTH should be >= 0 and <= MAX.';
+            }
             break;
 
         default:
             break;
     }
-    revertInputValueIfSpanNotUpdated(inputElement);
+    revertInputValueIfSpanNotUpdated(inputElement, error);
 }
 
 function updateMaxGrowth(val) {
@@ -218,11 +227,26 @@ function updateMaxOfMinAndMinOfMax(val) {
     $('#unit-range-max').attr('min', val);
 }
 
-function revertInputValueIfSpanNotUpdated(inputElement) {
+function revertInputValueIfSpanNotUpdated(inputElement, error) {
     const span = inputElement.parent().children('span');
     if (inputElement.val() != span.text()) {
         inputElement.val(span.text());
+        triggerError(inputElement.parent(), error);
     }
+}
+
+function triggerError(errorOrigin, errorMsg) {
+    const errorField = $('#error');
+
+    errorOrigin.addClass('error');
+    errorField.html(`<span>${errorMsg}</span>`);
+    errorField.slideDown(300)
+        .delay(4000)
+        .slideUp(300, () => {
+            errorOrigin.removeClass('error');
+            errorField.empty();
+        });
+
 }
 
 function updateSpanAndRangeValues(input, attr) {
