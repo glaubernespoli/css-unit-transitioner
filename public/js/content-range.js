@@ -39,7 +39,7 @@ export function executeOnRangeInputSlided(e) {
  */
 function getMaxRangeValueFor(unitLabel) {
     const unit = units[unitLabel];
-    const maxWidth = $('.unit-display').width();
+    const maxWidth = $('.unit-display-wrapper').width();
     return unitLabel === 'px' ? maxWidth : maxWidth / unit.conversion.px;
 }
 

@@ -2,6 +2,9 @@ import {
     getNumber,
     triggerError
 } from './utils.js';
+import {
+    executeUpdateDisplayBars
+} from './content-display-bars.js';
 
 /**
  * Actions to be taken after the unit has been selected.
@@ -112,6 +115,7 @@ export function updateSpanAndRangeValuesFor(inputElement) {
             if (val >= minVal && val <= maxVal) {
                 updateMaxOfMinAndMinOfMax(val);
                 updateSpanAndRangeValues(currentInput, 'value');
+                executeUpdateDisplayBars(val);
             } else {
                 error = 'Incorrect value: CURRENT should be >= MIN and <= MAX.';
             }

@@ -23,3 +23,7 @@
 17. responsiveness - input boxes get really bad when in small screen
 18. refactor updateSpanAndRangeValuesFor() on content-range-input.js - separate tasks
 19. Tests DD:
+20. adding a space at the end of the bars when using a max value higher than the screen
+
+BUGS:
+1. if you force an error message while the error message div is showing, it behaves stupidly

@@ -17,6 +17,17 @@ export function triggerError(errorOrigin, errorMsg) {
 
 }
 
+/**
+ * Converts a string value into a number, with a maximum of 2 digits.
+ * @param {string} strVal the number in string format
+ */
 export function getNumber(strVal) {
     return Math.round((parseFloat(strVal) + Number.EPSILON) * 100) / 100;
+}
+
+/**
+ * Get the current active unit.
+ */
+export function getActiveUnit() {
+    return $('div.unit-wrapper').find('.active');
 }

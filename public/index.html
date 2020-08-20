@@ -13,12 +13,12 @@
         <h1>Measurement Units</h1>
         <h2>Absolute Units</h2>
         <div class="unit-wrapper">
-            <button class="btn-cm clickable" data-unit="cm">Centimeter (cm)</button>
-            <button class="btn-mm clickable" data-unit="mm">Milimeter (mm)</button>
-            <button class="btn-in clickable" data-unit="in">Inches (in)</button>
-            <button class="btn-px clickable" data-unit="px">Pixels (px)</button>
-            <button class="btn-pt clickable" data-unit="pt">Points (pt)</button>
-            <button class="btn-pc clickable" data-unit="pc">Pica (pc)</button>
+            <button class="clickable" data-unit="cm">Centimeter (cm)</button>
+            <button class="clickable" data-unit="mm">Milimeter (mm)</button>
+            <button class="clickable" data-unit="in">Inches (in)</button>
+            <button class="clickable" data-unit="px">Pixels (px)</button>
+            <button class="clickable" data-unit="pt">Points (pt)</button>
+            <button class="clickable" data-unit="pc">Pica (pc)</button>
         </div>
         <div class="selected-wrapper block-none">
             <div class="unit-info-wrapper">
@@ -75,7 +75,37 @@
                 </div>
 
             </div>
-            <div class="unit-display-wrapper"></div>
+            <div class="unit-display-wrapper" id="unit-display-wrapper">
+                <div class="unit-display-box">
+                    <span>Centimeters</span>
+                    <div class="unit-display-bar" data-unit="cm"></div>
+                </div>
+
+                <div class="unit-display-box">
+                    <span>Milimeters</span>
+                    <div class="unit-display-bar" data-unit="mm"></div>
+                </div>
+
+                <div class="unit-display-box">
+                    <span>Inches</span>
+                    <div class="unit-display-bar" data-unit="in"></div>
+                </div>
+
+                <div class="unit-display-box">
+                    <span>Pixels</span>
+                    <div class="unit-display-bar" data-unit="px"></div>
+                </div>
+
+                <div class="unit-display-box">
+                    <span>Points</span>
+                    <div class="unit-display-bar" data-unit="pt"></div>
+                </div>
+
+                <div class="unit-display-box">
+                    <span>Picas</span>
+                    <div class="unit-display-bar" data-unit="pc"></div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="error"></div>
