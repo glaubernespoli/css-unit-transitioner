@@ -3,7 +3,7 @@ var path = require('path');
 
 const port = 5000;
 const app = express();
-const public = path.resolve(__dirname, '../public');
+const public = path.resolve(__dirname, '../docs');
 
 app.use(
     express.static(public)

@@ -16,7 +16,7 @@
 14. error messages if input incorrectly --OK
 13. organize the js file - funcions should be in different files based on what they do -- OK
 
-
+21. display bars v2 - update every bar to the current value (second tab)
 
 15. readme file
 16. style text input
@@ -24,6 +24,7 @@
 18. refactor updateSpanAndRangeValuesFor() on content-range-input.js - separate tasks
 19. Tests DD:
 20. adding a space at the end of the bars when using a max value higher than the screen
+22. RELATIVE UNITS!!
 
 BUGS:
 1. if you force an error message while the error message div is showing, it behaves stupidly
