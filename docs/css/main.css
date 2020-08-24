@@ -40,7 +40,7 @@ div.unit-wrapper button {
     margin-bottom: 0.7rem;
     background-color: inherit;
     display: inline-block;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--button-border-color);
     border-radius: 5px;
     height: 3rem;
     font-size: 13px;
@@ -187,7 +187,7 @@ div.unit-range-values-wrapper {
 div.unit-range-box {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--font-color-o);
+    border: 1px solid var(--button-border-color);
     border-radius: 5px;
     width: 5vw;
     height: 2.1rem;
@@ -195,7 +195,7 @@ div.unit-range-box {
 }
 
 div.unit-range-box:hover {
-    background-color: rgb(20, 56, 75);
+    background-color: var(--bg-color-highlight);
 }
 
 div.unit-range-box>label,
