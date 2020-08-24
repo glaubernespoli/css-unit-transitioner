@@ -216,7 +216,7 @@ div.unit-range-box>span {
 
 div.error,
 #error {
-    border: 1px solid rgb(177, 23, 23) !important;
+    border: 1px solid var(--error-border-color);
 }
 
 #error {
@@ -227,7 +227,7 @@ div.error,
     top: 5vh;
     left: 50%;
     transform: translate(-50%);
-    background-color: rgb(194, 100, 100);
+    background-color: var(--error-bg-color);
     padding: 1vh 3vw;
     /* background-color: rgb(149, 185, 204); */
     /* background-color: rgb(64, 122, 151); */
