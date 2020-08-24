@@ -58,57 +58,57 @@ div.unit-wrapper button:focus {
     outline: none;
 }
 
-div.unit-wrapper button[data-unit="cm"]:hover {
+div.unit-wrapper button[data-unit=cm]:hover {
     background-color: var(--cm-o);
 }
 
-div.unit-wrapper button[data-unit="mm"]:hover {
+div.unit-wrapper button[data-unit=mm]:hover {
     background-color: var(--mm-o);
 }
 
-div.unit-wrapper button[data-unit="in"]:hover {
+div.unit-wrapper button[data-unit=in]:hover {
     background-color: var(--in-o);
 }
 
-div.unit-wrapper button[data-unit="px"]:hover {
+div.unit-wrapper button[data-unit=px]:hover {
     background-color: var(--px-o);
 }
 
-div.unit-wrapper button[data-unit="pt"]:hover {
+div.unit-wrapper button[data-unit=pt]:hover {
     background-color: var(--pt-o);
 }
 
-div.unit-wrapper button[data-unit="pc"]:hover {
+div.unit-wrapper button[data-unit=pc]:hover {
     background-color: var(--pc-o);
 }
 
-div.unit-wrapper button[data-unit="cm"].active,
-div.unit-display-box>div.unit-display-bar[data-unit="cm"] {
+div.unit-wrapper button[data-unit=cm].active,
+div.unit-display-box>div.unit-display-bar[data-unit=cm] {
     background-color: var(--cm);
 }
 
-div.unit-wrapper button[data-unit="mm"].active,
-div.unit-display-box>div.unit-display-bar[data-unit="mm"] {
+div.unit-wrapper button[data-unit=mm].active,
+div.unit-display-box>div.unit-display-bar[data-unit=mm] {
     background-color: var(--mm);
 }
 
-div.unit-wrapper button[data-unit="in"].active,
-div.unit-display-box>div.unit-display-bar[data-unit="in"] {
+div.unit-wrapper button[data-unit=in].active,
+div.unit-display-box>div.unit-display-bar[data-unit=in] {
     background-color: var(--in);
 }
 
-div.unit-wrapper button[data-unit="px"].active,
-div.unit-display-box>div.unit-display-bar[data-unit="px"] {
+div.unit-wrapper button[data-unit=px].active,
+div.unit-display-box>div.unit-display-bar[data-unit=px] {
     background-color: var(--px);
 }
 
-div.unit-wrapper button[data-unit="pt"].active,
-div.unit-display-box>div.unit-display-bar[data-unit="pt"] {
+div.unit-wrapper button[data-unit=pt].active,
+div.unit-display-box>div.unit-display-bar[data-unit=pt] {
     background-color: var(--pt);
 }
 
-div.unit-wrapper button[data-unit="pc"].active,
-div.unit-display-box>div.unit-display-bar[data-unit="pc"] {
+div.unit-wrapper button[data-unit=pc].active,
+div.unit-display-box>div.unit-display-bar[data-unit=pc] {
     background-color: var(--pc);
 }
 
@@ -254,6 +254,24 @@ div.unit-display-wrapper>div.unit-display-box>span {
 div.unit-display-wrapper>div.unit-display-box>span::before {
     content: '•';
     margin-right: 5px;
+}
+
+input[type=number] {
+    background-color: transparent;
+    border: 0;
+    height: auto;
+    outline: none;
+    color: var(--font-color);
+    font-weight: bold;
+
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* div.unit-display-wrapper h3 {
