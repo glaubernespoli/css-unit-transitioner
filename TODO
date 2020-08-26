@@ -1,5 +1,5 @@
 
-//TODO:
+//DONE:
 9. auto select values on the inputs when they get focused --OK
 2. only numbers on inputs, no negative numbers; -- OK
 3. min <= current <= max; --OK
@@ -17,8 +17,10 @@
 13. organize the js file - funcions should be in different files based on what they do -- OK
 16. style text input -- OK
 
+//ACTIVE:
 21. display bars v2 - update every bar to the current value (second tab)
 
+//TODO:
 15. readme file
 17. responsiveness - input boxes get really bad when in small screen 
 ==>>> text inside input boxes should be scaled down according to screeen size 
@@ -31,5 +33,7 @@
 24. range unit value should grow relative to the current value in respect to decimals, not to exact numbers 
 ==>>> (i.e. if current = 36.5 and growth = 1, then if I slide it should go to 35.5/37.5, not 36/38)
 
-BUGS:
+
+==================================================
+//BUGS:
 1. if you force an error message while the error message div is showing, it behaves stupidly
