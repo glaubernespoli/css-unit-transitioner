@@ -33,13 +33,3 @@
 
 BUGS:
 1. if you force an error message while the error message div is showing, it behaves stupidly
-
-
-Version: 1.48.0
-Commit: db40434f562994116e5b21c24015a2e40b2504e6
-Date: 2020-08-13T07:40:55.768Z
-Electron: 7.3.2
-Chrome: 78.0.3904.130
-Node.js: 12.8.1
-V8: 7.8.279.23-electron.0
-OS: Linux x64 5.4.0-42-generic
