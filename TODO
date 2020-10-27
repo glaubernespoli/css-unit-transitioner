@@ -32,6 +32,7 @@
 23. range unit should go all the way to the end, even if current+growth > max (then current should be = max)
 24. range unit value should grow relative to the current value in respect to decimals, not to exact numbers 
 ==>>> (i.e. if current = 36.5 and growth = 1, then if I slide it should go to 35.5/37.5, not 36/38)
+25. Generated links (path should be able to resolve to a preset)
 
 
 ==================================================
